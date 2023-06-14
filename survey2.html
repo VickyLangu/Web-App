@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: linear-gradient(
+          68.6deg,
+          rgb(252, 165, 241) 1.8%,
+          rgb(181, 255, 255) 100.5%
+        );
+
+        display: block;
+        margin: 0 auto;
+        border: #000000 solid;
+        border-collapse: collapse;
+        width: 75%;
+      }
+
+      h1 {
+        text-align: center;
+      }
+      table {
+        display: block;
+        margin: 0 auto;
+        border: #000000 solid;
+        border-collapse: collapse;
+        width: 84%;
+      }
+
+      tr {
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      .centertable {
+        text-align: center;
+      }
+      button {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        padding: 0px;
+        font-size: 20px;
+        width: 100px;
+        border: 2px solid #000000;
+        background: #7dd87d;
+      }
+      button:hover {
+        cursor: pointer;
+        background: #698474;
+        color: white;
+      }
+
+      a {
+        text-decoration: none;
+        color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="survey.php" method="post">
+      <h1>Take our Survey</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Personal Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Surname</td>
+            <td><input type="text" name="surname" /></td>
+          </tr>
+          <tr>
+            <td>Names</td>
+            <td><input type="text" name="names" /></td>
+          </tr>
+          <tr>
+            <td>Contact</td>
+            <td><input type="number" name="contact" /></td>
+          </tr>
+          <tr>
+            <td>Date</td>
+            <td><input type="date" name="date" /></td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td><input type="number" name="age" style="width: 30px" /></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">
+              What is your favorite food? (Choose more than 1 answer)
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input
+                type="checkbox"
+                name="favoritefood[]"
+                value="Pizza"
+                id="choice1"
+              />
+              <label for="choice1">Pizza</label>
+              <br />
+              <input
+                type="checkbox"
+                name="favoritefood[]"
+                value="pasta"
+                id="choice2"
+              />
+              <label for="choice2">Pasta</label>
+              <br />
+              <input
+                type="checkbox"
+                name="favoritefood[]"
+                value="PapandWors"
+                id="choice3"
+              />
+              <label for="choice3">Pap and Wors</label>
+              <br />
+              <input
+                type="checkbox"
+                name="favoritefood[]"
+                value="ChickenStirFry"
+                id="choice4"
+              />
+              <label for="choice4">Chicken Stir Fry</label>
+              <br />
+              <input
+                type="checkbox"
+                name="favoritefood[]"
+                value="BeefStirFry"
+                id="choice5"
+              />
+              <label for="choice5">Beef Stir Fry</label>
+              <br />
+              <input
+                type="checkbox"
+                name="favoritefood[]"
+                value="Other"
+                id="choice6"
+              />
+              <label for="choice6">Other</label>
+              <br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="centertable">
+        <thead>
+          <tr>
+            <th></th>
+            <th style="width: 120px">Strongly Agree <br />(1)</th>
+            <th style="width: 120px">Agree <br />(2)</th>
+            <th style="width: 120px">Neutral <br />(3)</th>
+            <th style="width: 120px">Disagree <br />(4)</th>
+            <th style="width: 150px">Strongly Disagree <br />(5)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>I like to eat</td>
+            <td><input type="radio" name="response1" value="1" /></td>
+            <td><input type="radio" name="response1" value="2" /></td>
+            <td><input type="radio" name="response1" value="3" /></td>
+            <td><input type="radio" name="response1" value="4" /></td>
+            <td><input type="radio" name="response1" value="5" /></td>
+          </tr>
+          <tr>
+            <td>I like to watch movies</td>
+            <td><input type="radio" name="response2" value="1" /></td>
+            <td><input type="radio" name="response2" value="2" /></td>
+            <td><input type="radio" name="response2" value="3" /></td>
+            <td><input type="radio" name="response2" value="4" /></td>
+            <td><input type="radio" name="response2" value="5" /></td>
+          </tr>
+          <tr>
+            <td>I like to watch TV</td>
+            <td><input type="radio" name="response3" value="1" /></td>
+            <td><input type="radio" name="response3" value="2" /></td>
+            <td><input type="radio" name="response3" value="3" /></td>
+            <td><input type="radio" name="response3" value="4" /></td>
+            <td><input type="radio" name="response3" value="5" /></td>
+          </tr>
+          <tr>
+            <td>I like to listen to the radio</td>
+            <td><input type="radio" name="response4" value="1" /></td>
+            <td><input type="radio" name="response4" value="2" /></td>
+            <td><input type="radio" name="response4" value="3" /></td>
+            <td><input type="radio" name="response4" value="4" /></td>
+            <td><input type="radio" name="response4" value="5" /></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br />
+      <button type="submit" onclick="submitForm(event)">Submit</button>
+      <br />
+    </form>
+  </body>
+</html>
